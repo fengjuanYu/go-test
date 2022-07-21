@@ -55,9 +55,7 @@ public class CheckLiveCheckService {
                 List<AvailRoomStayDTO> newRoomStays = obtainNewArchitecture(o.toString());
                 boolean equalFlag = isEquals(oldRoomStays, newRoomStays);
                 if (!equalFlag) {
-                    log.info("inconsistent results------------supplier---" + supplierId);
-                    log.info("------------distributor---" + distributorId);
-                    log.info("------------hotelId--" + o);
+                    log.info("inconsistent results-----supplier:" + supplierId+"----distributor:" + distributorId+"----hotelId:" + o);
                     return false;
                 }
                if (++limit>50){
